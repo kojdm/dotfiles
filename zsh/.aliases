@@ -2,13 +2,14 @@
 alias laravel='~/.config/composer/vendor/bin/laravel'
 
 # Tanda
-alias tanda-remote-ssh='ssh deployer@49.255.232.162 -p 11922'
-alias tanda-sync='./useful_scripts/dev-server/start-sync.sh remote marvin'
+alias tanda-remote-ssh='ssh ruby@3.105.74.199'
+alias tanda-sync='cd ~/tanda/payaus && ./useful_scripts/dev-server/sync-aws.sh kojidelmundo'
 alias tanda='cd ~/tanda/payaus'
+alias ssh-reset='ssh-keygen -R 3.105.74.199'
 
 # Custom rails command
 alias rails-kill='kill -9 $(lsof -ti tcp:3000)'
-alias ts='ssh tanda'
+alias ts='tanda-remote-ssh'
 
 # Monkey patch oh-my-zsh alias
 alias gp='ggpush'
@@ -17,3 +18,12 @@ alias gp='ggpush'
 alias sw='cd ~/sweevr'
 
 alias mux='tmuxinator'
+
+alias uct='ctags -R --exclude=node_modules .'
+
+alias tmux='env TERM=screen-256color tmux'
+alias zsh-reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+
+alias tamux='tanda && tmux'
+
+alias jest-debug='node --inspect node_modules/.bin/jest --runInBand'

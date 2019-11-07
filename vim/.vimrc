@@ -22,9 +22,10 @@ call plug#end()
 
 " vim config
 set backspace=indent,eol,start
-set clipboard=unnamedplus " need +xterm_clipboard feature enabled in vim
-"set clipboard=unnamed " use this for macOS
+"set clipboard=unnamedplus " need +xterm_clipboard feature enabled in vim
+set clipboard=unnamed " use this for macOS
 " set cursorline " Need to use vim 8.1+ because https://github.com/vim/vim/issues/2584
+set encoding=utf-8
 set expandtab
 set hidden
 set hlsearch
@@ -96,12 +97,10 @@ autocmd! VimEnter * command! -nargs=* -complete=file Ag :call fzf#vim#ag_raw(<q-
 nnoremap <C-f> :Ag<Space>
 
 " set up truecolors
-if (has("termguicolors"))
-  set termguicolors
-endif
+set termguicolors
 
 syntax on
-colorscheme onedark
+colorscheme dracula
 
 " vim-matchup config
 let g:matchup_matchparen_deferred = 1
@@ -160,3 +159,6 @@ endfunction
 command! BTags call s:btags()
 
 nnoremap <C-b> :BTags<CR>
+
+set t_ZH=[3m
+set t_ZR=[23m

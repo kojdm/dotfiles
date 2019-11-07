@@ -104,3 +104,7 @@ include () {
 
 include ~/.aliases
 include ~/.init
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+[[ $TMUX = "" ]] && export TERM="xterm-256color"
