@@ -18,6 +18,7 @@ Plug 'sharkdp/fd'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'dracula/vim', {'as':'dracula'}
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
