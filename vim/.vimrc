@@ -9,7 +9,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Plug 'andymass/vim-matchup'
-Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
@@ -19,6 +18,12 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 call plug#end()
 
@@ -164,3 +169,12 @@ nnoremap <C-b> :BTags<CR>
 
 set t_ZH=[3m
 set t_ZR=[23m
+
+"ale config
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 1
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '.'
+
+" set filetypes as typescript.tsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
