@@ -27,3 +27,6 @@ alias zsh-reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 alias tamux='tanda && tmux'
 
 alias jest-debug='node --inspect node_modules/.bin/jest --runInBand'
+
+# Mashup Garage
+alias skippr='cd ~/skippr && mux skippr'
